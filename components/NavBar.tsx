@@ -1,4 +1,4 @@
-import styles from "./NavBar.module.css";
+import styles from "./NavBar.module.scss";
 
 type Props = {
   className?: React.ReactNode;
