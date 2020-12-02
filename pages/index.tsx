@@ -1,5 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import NavBar from "../components/NavBar";
+
+import "bootstrap/dist/css/bootstrap.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+import SideBar from "../components/SideBar";
 
 export default function Home() {
   return (
@@ -8,8 +13,8 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className={styles.nav}></nav>
-      <div className={styles.sidebar}></div>
+      <NavBar className={styles.nav} />
+      <SideBar className={styles.sidebar} />
       <main className={styles.main}></main>
       <footer className={styles.footer}></footer>
     </div>
