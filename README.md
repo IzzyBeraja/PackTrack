@@ -1,30 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PackTrack
 
-## Getting Started
+Need one stop to see every single package coming your way? Step no further!
+PackTrack has you covered!
 
-First, run the development server:
+No longer will you have to go to several different sites to see every single
+package you have coming your way. Just visit this site to see everything quickly
+and easily!
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Want to change anything in your order? Jump directly to it with a single click.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How does it work?
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+PackTrack will keep track of the orders you make on several different sites.
+Through OAuth authentication, PackTrack can see what you are ordering without
+you having to send us any passwords. We will keep you up to date on any changes
+to your order that happen so you don't have to!
 
-## Learn More
+Simply add the various services that you use to the app and we will begin
+populating your personal page with all of your orders. It's as simple as that.
 
-To learn more about Next.js, take a look at the following resources:
+## How can this help me?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+In todays day in age, we are relying more and more on deliveries to help us get
+what we need. There are several places that we rely on for packages ranging from
+Amazon to Walmart and other suppliers too. Once you start to realize how many
+places packages come from, it's easy to see why having somewhere to check
+everything becomes important.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Running a business? Keeping track of when deliveries are going to arrive from
+various different delivery companies and marketplaces becomes important.
 
-## Deploy on Vercel
+## How can I get started?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Easy! Just register on the site and authorize one of the various delivery
+services we are compatible with and you're set! Any updates will be tracked on
+here from now on.
