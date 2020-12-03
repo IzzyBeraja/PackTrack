@@ -1,9 +1,32 @@
-.container {
+.appBar {
   height: 100%;
-  display: flex;
+}
+
+.toolbar {
+  min-height: 100%;
 }
 
 .brand {
-  /* margin-left: 1rem; */
-  color: black;
+  padding-left: 1rem;
+}
+
+.menuItems {
+  a {
+    padding: 0.5rem;
+    margin-right: 1rem;
+  }
+
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+.button {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: auto;
+  }
 }

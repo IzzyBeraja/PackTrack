@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import SideBar from "../components/SideBar";
 
+const username = "Izzy Beraja";
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -13,7 +15,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar className={styles.nav} />
+      <NavBar className={styles.nav} username={username} />
       <SideBar className={styles.sidebar} />
       <main className={styles.main}></main>
       <footer className={styles.footer}></footer>
