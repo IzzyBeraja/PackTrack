@@ -5,14 +5,15 @@ import styles from "./NavBar.module.scss";
 
 type Props = {
   className?: string;
+  onOpenMenu: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   username: string;
 };
 
-const NavBar = ({ className, username }: Props) => {
+const NavBar = ({ className, username, onOpenMenu }: Props) => {
   return (
     <AppBar
       position="relative"
-      className={`${className ?? ""} ${styles.container}`}
+      className={`${className ?? ""} ${styles.appBar}`}
     >
       <Toolbar className={styles.toolbar}>
         <IconButton
@@ -21,6 +22,7 @@ const NavBar = ({ className, username }: Props) => {
           color="inherit"
           aria-label="menu"
           type="button"
+          onClick={onOpenMenu}
         >
           <MenuIcon />
         </IconButton>

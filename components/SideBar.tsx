@@ -1,29 +1,43 @@
+import { Drawer } from "@material-ui/core";
+import { SvgIconComponent } from "@material-ui/icons";
+import MaterialIconButton from "./common/MaterialIconButton";
+
 import styles from "./SideBar.module.scss";
 
-type Props = {
-  className?: React.ReactNode;
+export type SideBarItem = {
+  key: string;
+  icon: SvgIconComponent;
+  label: string;
+  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
-const SideBar = ({ className }: Props) => {
+type Props = {
+  className?: string;
+  isOpen: boolean;
+  onClose: (event: {}, reason: "backdropClick" | "escapeKeyDown") => void;
+  style: "compressed" | "expanded";
+  sideBarItemList: SideBarItem[];
+};
+
+const SideBar = ({
+  className,
+  isOpen,
+  onClose,
+  sideBarItemList,
+  style,
+}: Props) => {
   return (
-    <div className={`${className ?? ""} ${styles.container}`}>
-      <div className={styles.top}>
-        <div>
-          <i className={`fas fa-home ${styles.icon}`} />
-        </div>
-        <div>
-          <i className={`fas fa-search ${styles.icon}`} />
-        </div>
-      </div>
-      <div className={styles.bottom}>
-        <div>
-          <i className={`fas fa-cog ${styles.icon}`} />
-        </div>
-        <div>
-          <i className={`fas fa-user ${styles.icon}`} />
-        </div>
-      </div>
-    </div>
+    <Drawer className={className} anchor="left" open={isOpen} onClose={onClose}>
+      {sideBarItemList.map(({ key, icon, label, onClick }) => (
+        <MaterialIconButton
+          key={key}
+          icon={icon}
+          label={label}
+          style={style}
+          onClick={onClick}
+        />
+      ))}
+    </Drawer>
   );
 };
 
