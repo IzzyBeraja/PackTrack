@@ -8,7 +8,7 @@ type Props = {
   label: string;
   className?: string;
   type?: "button" | "submit" | "reset";
-  style?: "compressed" | "expanded";
+  style?: "collapsed" | "expanded";
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 

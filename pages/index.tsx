@@ -8,34 +8,15 @@ import { useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "@fortawesome/fontawesome-free/css/all.css";
-import SideBar, { SideBarItem } from "../components/SideBar";
+import SideBar from "../components/SideBar";
 
 export default function Home() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-  const [sideBarStyle, setSideBarStyle] = useState<"compressed" | "expanded">(
-    "compressed"
+  const [sideBarStyle, setSideBarStyle] = useState<"collapsed" | "expanded">(
+    "collapsed"
   );
 
   const username = "Izzy Beraja";
-  const sideBarItems: SideBarItem[] = [
-    { key: "1", icon: HomeIcon, label: "Home", onClick: () => {} },
-    {
-      key: "2",
-      icon: Search,
-      label: "Search",
-      onClick: () => {
-        setSideBarStyle("compressed");
-      },
-    },
-    {
-      key: "3",
-      icon: Filter,
-      label: "Filter",
-      onClick: () => {
-        setSideBarStyle("expanded");
-      },
-    },
-  ];
 
   return (
     <div className={styles.container}>
@@ -48,13 +29,7 @@ export default function Home() {
         onOpenMenu={() => setIsSideBarOpen(true)}
         username={username}
       />
-      <SideBar
-        className={styles.sidebar}
-        isOpen={isSideBarOpen}
-        onClose={() => setIsSideBarOpen(false)}
-        style={sideBarStyle}
-        sideBarItemList={sideBarItems}
-      />
+      <SideBar className={styles.sidebar} />
       <main className={styles.main}></main>
       <footer className={styles.footer}></footer>
     </div>
