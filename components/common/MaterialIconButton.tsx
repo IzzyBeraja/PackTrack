@@ -20,19 +20,16 @@ const MaterialIconButton = ({
   style,
   onClick,
 }: Props) => {
+  const exp = style === "expanded";
   return (
     <Button
       style={{ outline: "none" }}
-      className={`${className ?? ""} ${styles.button}`}
+      className={[className ?? "", styles.button].join(" ")}
       type={type ?? "button"}
       onClick={onClick}
     >
-      <SvgIcon
-        className={style !== "expanded" ? styles.iconOnly : ""}
-        component={icon}
-      />
-
-      {style === "expanded" && (
+      <SvgIcon className={exp && styles.svgIcon} component={icon} />
+      {exp && (
         <Typography variant="button" className={styles.text}>
           {label}
         </Typography>

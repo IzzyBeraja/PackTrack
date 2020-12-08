@@ -1,6 +1,8 @@
 import { SvgIconComponent, WebAsset } from "@material-ui/icons";
 import MaterialIconButton from "./MaterialIconButton";
 
+import styles from "./Drawer.module.scss";
+
 export type DrawerItem = {
   key: string;
   label: string;
@@ -9,20 +11,24 @@ export type DrawerItem = {
 };
 
 type Props = {
-  status: "expanded" | "collapsed";
+  style: "expanded" | "collapsed";
   items: DrawerItem[];
+  className?: string;
 };
 
-const Drawer = ({ status, items }: Props) => {
+const Drawer = ({ style, items, className }: Props) => {
+  const buttonStyles =
+    style === "expanded" ? styles.expandedButton : styles.collapsedButton;
   return (
-    <div>
+    <div className={className ?? ""}>
       {items.map(({ key, label, icon, onClick }) => (
         <div key={key}>
           <MaterialIconButton
+            className={buttonStyles}
             icon={icon || WebAsset}
             label={label}
             onClick={onClick}
-            style={status}
+            style={style}
           />
         </div>
       ))}

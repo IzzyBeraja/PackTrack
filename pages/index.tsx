@@ -11,10 +11,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import SideBar from "../components/SideBar";
 
 export default function Home() {
-  const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-  const [sideBarStyle, setSideBarStyle] = useState<"collapsed" | "expanded">(
-    "collapsed"
-  );
+  const [sideBarOpen, setSideBarOpen] = useState(false);
 
   const username = "Izzy Beraja";
 
@@ -26,10 +23,13 @@ export default function Home() {
       </Head>
       <NavBar
         className={styles.nav}
-        onOpenMenu={() => setIsSideBarOpen(true)}
+        onOpenMenu={() => setSideBarOpen(!sideBarOpen)}
         username={username}
       />
-      <SideBar className={styles.sidebar} />
+      <SideBar
+        className={styles.sidebar}
+        style={sideBarOpen ? "expanded" : "collapsed"}
+      />
       <main className={styles.main}></main>
       <footer className={styles.footer}></footer>
     </div>

@@ -5,9 +5,10 @@ import styles from "./SideBar.module.scss";
 
 type Props = {
   className?: string;
+  style?: "collapsed" | "expanded";
 };
 
-const SideBar = ({ className }: Props) => {
+const SideBar = ({ className, style }: Props) => {
   const sideBarItems: DrawerItem[] = [
     {
       key: "1",
@@ -23,7 +24,7 @@ const SideBar = ({ className }: Props) => {
     },
   ];
 
-  return <Drawer items={sideBarItems} status="expanded" />;
+  return <Drawer items={sideBarItems} style={style ?? "expanded"} />;
 };
 
 export default SideBar;
