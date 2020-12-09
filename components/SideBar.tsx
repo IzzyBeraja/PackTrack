@@ -24,7 +24,13 @@ const SideBar = ({ className, style }: Props) => {
     },
   ];
 
-  return <Drawer items={sideBarItems} style={style ?? "expanded"} />;
+  return (
+    <Drawer
+      className={styles.container}
+      items={sideBarItems}
+      style={style ?? "expanded"}
+    />
+  );
 };
 
 export default SideBar;

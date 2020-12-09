@@ -28,12 +28,10 @@ const MaterialIconButton = ({
       type={type ?? "button"}
       onClick={onClick}
     >
-      <SvgIcon className={exp && styles.svgIcon} component={icon} />
-      {exp && (
-        <Typography variant="button" className={styles.text}>
-          {label}
-        </Typography>
-      )}
+      <SvgIcon className={exp ? styles.svgIcon : ""} component={icon} />
+      <Typography variant="button" hidden={!exp} className={styles.text}>
+        {label}
+      </Typography>
     </Button>
   );
 };

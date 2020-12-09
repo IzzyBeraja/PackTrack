@@ -22,15 +22,14 @@ const Drawer = ({ style, items, className }: Props) => {
   return (
     <div className={className ?? ""}>
       {items.map(({ key, label, icon, onClick }) => (
-        <div key={key}>
-          <MaterialIconButton
-            className={buttonStyles}
-            icon={icon || WebAsset}
-            label={label}
-            onClick={onClick}
-            style={style}
-          />
-        </div>
+        <MaterialIconButton
+          key={key}
+          className={buttonStyles}
+          icon={icon || WebAsset}
+          label={label}
+          onClick={onClick}
+          style={style}
+        />
       ))}
     </div>
   );
