@@ -1,0 +1,8 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 15rem 15rem 15rem 15rem;
+  grid-template-rows: 15rem 15rem;
+  justify-content: space-evenly;
+  row-gap: 2rem;
+  margin: 2rem;
+}
